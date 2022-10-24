@@ -22,7 +22,7 @@ const sentence = greeting(name);
 console.log(sentence);
 ```
 
-**THIS LEAD TO A PROBLEM: What if a synchronous function takes too long to finish?**
+**THIS LEADS TO A PROBLEM: What if a synchronous function takes too long to finish?**
 For example
 - LineA;
 - LineB; (take a very long time)
