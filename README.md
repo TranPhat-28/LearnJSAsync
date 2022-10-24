@@ -66,3 +66,15 @@ const primes = generatePrimes(1000000);
 // Print 'Finished'
 console.log('Finished!')
 ```
+
+<h1> 2. ASYNCHRONOUS </h1>
+To handle the problem with time-consuming synchronous code, we can use asynchronous
+The two most used methods are **Promise** and **Async / Await**
+
+How asynchronous works:
+- Start a long-running operation by calling a function.
+- Have that function start the operation and return immediately, so that our program can still be responsive to other events.
+- Notify us with the result of the operation when it eventually completes.
+![image](https://user-images.githubusercontent.com/62002249/197490216-36b2a8e4-6a4e-4df9-83b3-97b977bf9299.png)
+
+<h2> Promise </h2>
