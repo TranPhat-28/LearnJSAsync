@@ -24,9 +24,9 @@ console.log(sentence);
 
 **THIS LEAD TO A PROBLEM: What if a synchronous function takes too long to finish?**
 For example
-LineA;
-LineB; (take a very long time)
-LineC; (will have to wait for B to finish before it can execute)
+- LineA;
+- LineB; (take a very long time)
+- LineC; (will have to wait for B to finish before it can execute)
 The code below use a very insufficient algorithm to generate primes. This lead to the program having to wait for an amount of time before it can execute the next line (output finish)
 
 ```
