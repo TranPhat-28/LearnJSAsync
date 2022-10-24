@@ -78,3 +78,52 @@ How asynchronous works:
 ![image](https://user-images.githubusercontent.com/62002249/197490574-81288a1d-6bb2-47e3-b2d5-bf7a81b54bf8.png)
 
 <h2> Promise </h2>
+
+We will use ```fetch()``` to demonstrate asynchronous. Example
+```
+const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+
+console.log(fetchPromise);
+
+fetchPromise.then((response) => {
+  console.log(`Received response: ${response.status}`);
+});
+
+console.log("Started request…");
+```
+
+The code above:
+- Call the fetch() API, and assigning the return value to the fetchPromise variable
+- Immediately after, logging the fetchPromise variable. This should output something like: ```Promise { <state>: "pending" }```, telling us that we have a Promise object, and it has a state whose value is "pending". The "pending" state means that the fetch operation is still going on.
+- When (and if) the fetch operation succeeds, the promise will execute anything inside its ```.then()```, in this case we print out the server's response.
+- Print a message that we have started the request.
+
+The output should looks like this
+```
+Promise { <state>: "pending" }
+Started request…
+Received response: 200
+```
+
+
+
+As we have already known, these code block will have different outputs because they are synchronous code
+
+```
+console.log('First')
+console.log('Second')
+```
+and
+
+```
+console.log('Second')
+console.log('First')
+```
+
+However with ```fetch()``` , we clearly see that although ```console.log("Started request...");``` is below ```fetch()``` , it output is logged before the ```fetch()``` output. This is because ```fetch()``` takes longer to finish its task.
+
+![image](https://user-images.githubusercontent.com/62002249/197495188-001d0787-0649-4fdf-86b4-dd52b92c8ebc.png)
+
+
+
+<h2> Async / Await </h2>
