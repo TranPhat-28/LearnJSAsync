@@ -4,6 +4,10 @@ Some simple note for beginners to better understand asynchronous in Javascript
 <h1>1. SYNCHRONOUS</h1>
 The program goes through each line of code, one by one. It has to wait for a line to finish before going to the next line
 
+![image](https://user-images.githubusercontent.com/62002249/197486847-296988f7-a9b1-4a8e-9db9-446d39f96f25.png)
+
+Example
+
 ```
 const name = 'John';
 const greeting = 'Hello my name is ' + name;
